@@ -13,21 +13,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     font-weight: bold;
     position: relative;
             }
     .left .title {
     position: absolute;
-    top: 10%;
+    top: 1%;
     text-align: center;
+    
             }
-    .left .title span {
+    .left .title h1 {
     display: block;
+    -webkit-text-stroke: 3px black; /* Define a borda automaticamente */
             }
     .left .title .white {
-    color: white;
+    color: rgb(255, 255, 255);
+    border: 2px solid black;
             }
     .right {
     width: 30%;
@@ -72,21 +75,22 @@ body {
             }
     .professor {
     width: 60%;
-    height: 50px;
-    background-color: white;
-    margin: 10px;
-            }
-    .coordenador {
-    width: 60%;
-    height: 50px;
-    background-color: white;
-    margin: 10px;
-            }
-    .funcionario{
-    width: 60%;
-    height: 50px;
+    height: 80px;
     background-color: white;
     margin: 10px;
     border: 2px solid black;
             }
-    
+    .coordenador {
+    width: 60%;
+    height: 80px;
+    background-color: white;
+    margin: 100px;
+    border: 2px solid black;
+            }
+    .funcionario{
+    width: 60%;
+    height: 80px;
+    background-color: white;
+    margin: 10px;
+    border: 2px solid black;
+            }

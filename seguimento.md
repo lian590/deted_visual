@@ -20,6 +20,6 @@ formatei o documentop login.html e adicionei e formatei um novo documento cadstr
 
 
 
-
-
-pos_login : luciano: adicionei uma cor degrader ao lado esquerdo
+pos_login : luciano: 
+*adicionei uma cor degrader ao lado esquerdo.
+*foi adicionada uma borda nos retangulos brancos e aumentamos a largura dele, tambem foi feito uma alteração no titlo, dando uma bordar tambem.
