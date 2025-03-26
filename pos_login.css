@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    }
+    .container {
+    display: flex;
+    height: 100vh;
+            }
+    .left {
+    background: linear-gradient(to right, red, white);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+            }
+    .left .title {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+            }
+    .left .title span {
+    display: block;
+            }
+    .left .title .white {
+    color: white;
+            }
+    .right {
+    width: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+            }
+    .camera {
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+            }
+    .buttons {
+    display: flex;
+    gap: 20px;
+            }
+    .button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+            }
+    .button.red {
+    background-color: red;
+            }
+    .button.green {
+    background-color: green;
+            }
+    .button:hover {
+    opacity: 0.8;
+            }
+    .professor {
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    margin: 10px;
+            }
+    .coordenador {
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    margin: 10px;
+            }
+    .funcionario{
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    margin: 10px;
+    border: 2px solid black;
+            }
+    
