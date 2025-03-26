@@ -22,4 +22,4 @@ formatei o documentop login.html e adicionei e formatei um novo documento cadstr
 
 
 
-pos_login : luciano
+pos_login : luciano: adicionei uma cor degrader ao lado esquerdo
