@@ -1,6 +1,6 @@
 // Pegando o elemento de áudio e o botão
-var audio = document.getElementById("meuAudio");
-var botao = document.getElementById("botao");  // O ID agora é "botao", como no HTML
+var audioElement = document.getElementById("meuAudio");
+var playButton = document.getElementById("Ia");  // O ID agora é "botao", como no HTML
 
 // Adicionando evento de clique ao botão
 botao.addEventListener("click", function() {
