@@ -1,3 +1,0 @@
-var bunda; position = screenLeft
-
- 
