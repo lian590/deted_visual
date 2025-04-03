@@ -166,8 +166,8 @@ body {
 
      #frameContainer {
         position: fixed;
-        top: 50%;
-        left: 50%;
+        top: 40%;
+        left: 42%;
         transform: translate(-50%, -50%);
         width: 50%;
         height: 505;
