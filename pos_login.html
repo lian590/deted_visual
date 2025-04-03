@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pos_login.css">
     <title>E.E. Caetano de Campos</title>
+
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <div class="Lateral">
-                <div class="menu">
-
-                </div>
-                <div class="itens">
-                    <p>
-                        <li><a href="secretaria.html">item1</a></li>
-                        <li>item2</li>
-                        <li>item3</li>
-                    </p>
-                </div>
-            </div>
             <div class="title">
                 <h1>E.E. Caetano de <br> Campos</h1>
             </div>
-            <button class="professor" onclick="alert('botao')"><p>Lista</p></button>
-        </div>
-        <div class="right">
-            <div class="camera">camera</div>
-                <div class="buttons">
-                    <button class="button red" onclick="alert('Botão vermelho clicado!')">Vermelho</button>
-                    <button class="button green" onclick="alert('Botão verde clicado!')">Verde</button>
-                </div>
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
+            <div id="menu" class="menu">
+                <nav class="lista">
+                    <ul class="ul">
+                    <li><a href="funcionarios.html">Funcionarios</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="cordenadores.html">Cordenadores</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+    
+
+    <div class="right">
+        <div class="camera">camera</div>
+            <div class="buttons">
+                <button class="button red" onclick="alert('Botão vermelho clicado!')">Vermelho</button>
+                <button class="button green" onclick="alert('Botão verde clicado!')">Verde</button>
+            </div>
+        </div>
+    </div>
+    <script src="pos_login.js"></script>
 </body>
 </html>
