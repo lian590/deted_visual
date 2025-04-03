@@ -1,4 +1,4 @@
-display : erik
+display : erick
 
 
 
@@ -22,3 +22,6 @@ formatei o documentop login.html e adicionei e formatei um novo documento cadstr
 
 pos_login : luciano: 
 *adicionei uma cor degrader ao lado esquerdo.
+
+
+as alterações que foram feitas no pc do vitinho enquanto a gente estava sem internet foram comitadas, agora estão no git.

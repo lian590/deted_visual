@@ -91,5 +91,18 @@ h1 span {
     sans-serif;
 }
 
-
+.audio-player{
+    text-align: center;
+}
+.Iniciar{
+    position: absolute;
+    right: 390px;
+    top: 673px;
+    margin: 10px;
+}
+.Encerrar {
+    position: absolute;
+    right: 100px;
+    top: 680px;
+}
 
