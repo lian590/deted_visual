@@ -17,13 +17,21 @@
             <div id="menu" class="menu">
                 <nav class="lista">
                     <ul class="ul">
-                    <li><a href="funcionarios.html">Funcionarios</a></li>
-                    <li><a href="professores.html">Professores</a></li>
-                    <li><a href="cordenadores.html">Cordenadores</a></li>
+                    <li onclick="openFrame( 'funcionarios.html' )">Funcionarios</li>
+                    <li onclick="openFrame( 'professores.html' )">Professores</li>
+                    <li onclick="openFrame( 'cordenadores.html' )">Cordenadores</li>
                     </ul>
                 </nav>
             </div>
         </div>
+        
+        <div id="frameContainer" class="hidden">
+            <div class="frameContent">
+                <span class="closeButton" onclick="closeFrame()">fechar</span>
+                <div id="frameContent"></div>
+            </div>
+        </div>
+
     
 
     <div class="right">
