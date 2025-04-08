@@ -25,3 +25,8 @@ pos_login : luciano:
 
 
 as alterações que foram feitas no pc do vitinho enquanto a gente estava sem internet foram comitadas, agora estão no git.
+
+
+
+
+RELEMBRANDO QUE DEVE SER CORRIGIDO AS ROUTAS DO FLASK PARA MELHORAR A ESTETICA DO CABEÇALHO DO SITE. 
