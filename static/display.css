@@ -1,0 +1,97 @@
+/* styles.css */
+
+/* Define o estilo geral da página */
+body {
+    margin: 0;
+    display: flex; /* Centraliza os elementos na tela */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Usa toda a altura da tela */
+    background: linear-gradient(to right, red, white); /* Fundo com gradiente vermelho para branco */
+    font-family: Arial, sans-serif;
+}
+
+/* Define um contêiner centralizado para os elementos */
+.container {
+    text-align: center;
+}
+
+/* Estiliza o título principal */
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 20px; /* Posiciona o título no topo da página */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Estiliza o span dentro do título */
+h1 span {
+    color: red; /* Muda a cor de parte do título para vermelho */
+}
+
+/* Estiliza a classe "Secret" */
+.Secret {
+    position: absolute;
+    top: 250px; /* Define a posição vertical */
+    right: 100px; /* Define a posição horizontal */
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 100px;
+    padding: 35px;
+    border-radius: 8px; /* Arredonda os cantos */
+    font-size: 30px;
+}
+
+/* Estiliza a classe "Direct" */
+.Direct {  
+    position: absolute;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 100px;
+    padding: 35px;
+    border-radius: 8px;
+    font-size: 30px;
+    top: 550px; /* Define a posição vertical */
+}
+
+/* Estiliza a classe "audio" */
+.audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os elementos */
+    font-size: 30px;
+}
+
+/* Estiliza a classe "text", que contém um bloco de texto */
+.text {
+    width: 800px;
+    height: 400px;
+    padding: 15px;
+    background-color: none; /* Nenhuma cor de fundo definida */
+    overflow: auto; /* Permite rolagem caso o conteúdo seja maior que a área */
+    position: absolute;
+    left: 10px; /* Define a posição horizontal */
+    direction: rtl; /* Define a direção do texto como da direita para a esquerda */
+    unicode-bidi: bidi-override; /* Força o texto a seguir a direção definida */
+    text-align: left;
+}
+
+/* Estiliza os elementos dentro de .texte para forçar a direção da esquerda para a direita */
+.texte * {
+    direction: ltr;
+}
+
+/* Estiliza os parágrafos dentro de .text */
+.text p {
+    color: rgb(255, 255, 255); /* Define a cor do texto como branco */
+    font-size: 20px;
+    overflow: arial, /* Erro aqui: deveria ser apenas font-family: Arial, sans-serif; */
+    sans-serif;
+}

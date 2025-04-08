@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pos_login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pos_login.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>E.E. Caetano de Campos</title>
 
 </head>
@@ -19,7 +20,7 @@
                     <ul class="ul">
                     <li onclick="openFrame( 'funcionarios.html' )">Funcionarios</li>
                     <li onclick="openFrame( 'professores.html' )">Professores</li>
-                    <li onclick="openFrame( 'coordenadores.html' )">Coordenadores</li>
+                    <li onclick="openFrame( 'cordenadores.html' )">Cordenadores</li>
                     </ul>
                 </nav>
             </div>
@@ -42,6 +43,6 @@
             </div>
         </div>
     </div>
-    <script src="pos_login.js"></script>
+    <script src="{{ url_for('static', filename='pos_login.js') }}"></script>
 </body>
 </html>
