@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pos_login.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>E.E. Caetano de Campos</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <h1>E.E. Caetano de <br> Campos</h1>
+            </div>
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
+            <div id="menu" class="menu">
+                <nav class="lista">
+                    <ul class="ul">
+                    <li onclick="openFrame( 'funcionarios.html' )">Funcionarios</li>
+                    <li onclick="openFrame( 'professores.html' )">Professores</li>
+                    <li onclick="openFrame( 'cordenadores.html' )">Cordenadores</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div id="frameContainer" class="hidden">
+            <div class="frameContent">
+                <span class="closeButton" onclick="closeFrame()">X</span>
+                <div id="frameContent"></div>
+            </div>
+        </div>
+
+    
+
+    <div class="right">
+        <div class="camera">camera</div>
+            <div class="buttons">
+                <button class="button red" onclick="alert('Botão vermelho clicado!')">Vermelho</button>
+                <button class="button green" onclick="alert('Botão verde clicado!')">Verde</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='pos_login.js') }}"></script>
+</body>
+</html>
