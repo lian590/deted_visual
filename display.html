@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detect Visual</title>
-
     <link rel="stylesheet" href="display.css">
-
-    <script src="{{ url_for('static', filename='display.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='display.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-
 </head>
 <body>
     <div class="container">
@@ -19,18 +13,17 @@
 
     <div class="Secretaria">
         <button class="Secret"
-        onclick="window.location.href='{{ url_for('cadastro') }}';">
+        onclick="window.location.href='Secretaria.html';">
             Secretaria
         </button>
     </div>
 
     <div class="Diretoria">
         <button class="Direct"
-        onclick="window.location.href='{{ url_for('login') }}';">
-    Diretoria
-</button>
+        onclick="window.location.href='login.html';">
+        Diretoria
+        </button>
     </div>
-
     <div class="audio-player">
         <audio id="meuAudio" src="audio ai.mp3" preload="auto"></audio>
      
@@ -41,7 +34,6 @@
         
     </div>
     </div>     
-
     <div class="text" > <!--scroll-->
         <div class="texte"><!--texto-->
             <h2>Você sabe o que e o acesso rapido? </h2>
@@ -76,10 +68,7 @@
                 <p>O acesso rapido servira muito mais como um aplicativo, ele ajudará e ira facilitar a segurança e o controle de entrada.</p>
             </div>
         </div>
-
         <script src="display.js"></script>
-
-            
         </body>
         </html>
         
