@@ -1,14 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("audio");
-    const playButton = document.getElementById("playButton");
-    const stopButton = document.getElementById("stopButton");
-    
-    playButton.addEventListener("click", function() {
-        audio.play();
-    });
+const audio = document.getElementById("meuAudio");
 
-    stopButton.addEventListener("click", function() {
-        audio.pause();
-        audio.currentTime = 0;
-    });
-});
+function tocarAudio() {
+  audio.play();
+}
+
+function pausarAudio() {
+  audio.pause();
+}
+
+function reiniciarAudio() {
+  audio.currentTime = 0;
+  audio.play();
+}

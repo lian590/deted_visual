@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detect Visual</title>
-    <script src="display.js"></script>
     <link rel="stylesheet" href="display.css">
 </head>
 <body>
@@ -26,19 +25,18 @@
         </button>
     </div>
     <div class="audio-player">
-        <audio id="audio" src="audio ai.mp3"></audio>
-        <div class="Iniciar">
-            <button id="playButton">Tocar</button>
-        </div>
-        <div class="Encerrar">
-            <button id="stopButton">Parar</button>
-        </div>
+        <audio id="meuAudio" src="audio ai.mp3" preload="auto"></audio>
+     
+        <button class="play" onclick="tocarAudio()">▶️ </button>
+        <button class="pause" onclick="pausarAudio()">⏸️ </button>
+        <button class="replay" onclick="reiniciarAudio()">🔁 </button>
+
+        
     </div>
     </div>     
     <div class="text" > <!--scroll-->
         <div class="texte"><!--texto-->
-
-            <h2> Você sabe o que e o acesso rapido? </h2>
+            <h2>Você sabe o que e o acesso rapido? </h2>
             <p>O acesso rapido nasceu para facilitar e verificar a entrada de funcionarios, professores e alunos na "e.e. caetano de campos aclimacao", registrando a sua presença.</p>
             
             <h3>Quais beneficios trazem o "acesso rapido"? </h3>
@@ -70,7 +68,7 @@
                 <p>O acesso rapido servira muito mais como um aplicativo, ele ajudará e ira facilitar a segurança e o controle de entrada.</p>
             </div>
         </div>
-
+        <script src="display.js"></script>
         </body>
         </html>
         

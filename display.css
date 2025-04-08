@@ -94,15 +94,33 @@ h1 span {
 .audio-player{
     text-align: center;
 }
-.Iniciar{
+.play{
     position: absolute;
-    right: 390px;
-    top: 673px;
-    margin: 10px;
-}
-.Encerrar {
-    position: absolute;
-    right: 100px;
+    right: 400px;
     top: 680px;
+    padding: 10px;
+    background-color: cyan;
+    border-radius: 10px;
+    border: none;
+    
+}
+.replay {
+    position: absolute;
+    right: 110px;
+    top: 680px;
+    padding: 10px;
+    background-color: cyan;
+    border-radius: 10px;
+    border: none;
+}
+
+.pause {
+    position: absolute;
+    right: 255px;
+    top: 680px;
+    padding: 10px;
+    background-color: cyan;
+    border-radius: 10px;
+    border: none;
 }
 
