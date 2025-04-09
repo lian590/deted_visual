@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="titulo">
-    <h1>Dedect <span>Visual</span></h1>
+    <h1 class="titulo-detect-visual">Dedect <span>Visual</span></h1>
 </div>
 
 <div>
@@ -25,16 +25,16 @@
     </button>
 </div>
 
-<div class="audio-container">
+<div class="audio">
     <h1>Áudio</h1>
     <div class="audio-player">
         <audio id="meuAudio" src="/static/audio ai.mp3" preload="auto"></audio>
-        <div class="buttons">
-            <button class="play" onclick="tocarAudio()">▶️</button>
-            <button class="pause" onclick="pausarAudio()">⏸️</button>
-            <button class="replay" onclick="reiniciarAudio()">🔁</button>
+        <div class="botoes-audio">
+            <button class="boton-d" onclick="tocarAudio()">▶️</button>
+            <button class="boton-d" onclick="pausarAudio()">⏸️</button>
+            <button class="boton-d" onclick="reiniciarAudio()">🔁</button>
         </div>
-        <div class="timer" id="timer">00:00</div>
+        <div class="contador" id="timer">00:00</div>
     </div>
 </div>
 

@@ -21,7 +21,7 @@ body {
 /* MODIFICAÇAO DO TITULO CAETANO DE CAMPOS*/
 
 
-h1 {
+.titulo-detect-visual {
     font-size: 3em;
     font-weight: bold;
     color: black;
@@ -140,19 +140,20 @@ h1 span {
 
 /* modificaçao dos botoes dos audios*/
 
-.audio-container {
-    
+.audio {
+    color: rgb(255, 255, 255);
     position: relative;
-    left: 670px;
+    left: 675px;
     top: 300px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px; /* Defina uma largura fixa ou percentual */
+    width: 250px; /* Defina uma largura fixa ou percentual */
     margin: 0 auto; /* Centraliza a caixa na página */
+    height: 150px;
 }
 
 .audio-player {
@@ -163,8 +164,8 @@ h1 span {
     margin-top: 10px; /* Espaço entre os botões e o timer */
 }
 
-.buttons {
-    margin: 20px 0;
+.botoes-audio {
+    margin: 0px 0;
 }
 
 button {
@@ -174,7 +175,13 @@ button {
     cursor: pointer;
 }
 
-.timer {
-    font-size: 24px;
+.contador {
+    font-size: 30px;
     margin-top: 10px; /* Espaço acima do timer */
+}
+
+.boton-d {
+    background-color: rgb(255, 0, 0);
+    border-radius: 25px  ;
+    border: 0px solid;
 }
