@@ -1,19 +1,23 @@
-/* styles.css */
+html {
+    background-image: url(caetano\ png.png);
+}
+
+
+
+
+
+
+/* modifiaçao do texto scrull*/
+
 body {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
-    font-family: Arial, sans-serif;
+    
+    
 }
-
-.container {
-    text-align: center;
-}
-
-
 /* MODIFICAÇAO DO TITULO CAETANO DE CAMPOS*/
 
 
@@ -37,7 +41,7 @@ h1 span {
 
 .Secret {  
     position: absolute;
-    top: 250px;
+    top: 350px;
     right: 100px;
     width: 350px;
     height: 100px;
@@ -49,7 +53,7 @@ h1 span {
     text-decoration: none;
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: rgb(252, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 5px, 5px 0px #000;
@@ -70,7 +74,7 @@ h1 span {
 
 .Direct {  
     position: absolute;
-    top: 450px;
+    top: 500px;
     right: 100px;
     width: 350px;
     height: 100px;
@@ -82,17 +86,17 @@ h1 span {
     text-decoration: none;
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 5px, 5px 0px #000;
     transition: all 0.3s ease;
 }
 .Direct:hover {
-    background-color: whitesmoke;
-    color: red;
-    border: 2px solid red;
-    box-shadow: 5px 5px 0px red;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 0px rgb(0, 0, 0);
 }
 .Direct:active {
     background-color: yellow;
@@ -103,12 +107,16 @@ h1 span {
 
 /* modificaçao do texto com scrull*/
 
+.titulo-scrull {
+    color: rgb(255, 0, 0);
+}
 
-.text {
+.text {   
     width: 800px;
     height: 400px;
     padding: 15px;
     background-color: none;
+    backdrop-filter: blur(10px);
     overflow: auto;
     position: absolute;
     left: 10px;
@@ -139,7 +147,7 @@ h1 span {
     right: 400px;
     top: 680px;
     padding: 10px;
-    background-color: cyan;
+    background-color: rgb(0, 89, 255);
     border-radius: 10px;
     border: none;
     
