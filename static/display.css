@@ -13,6 +13,10 @@ body {
     text-align: center;
 }
 
+
+/* MODIFICAÇAO DO TITULO CAETANO DE CAMPOS*/
+
+
 h1 {
     font-size: 3em;
     font-weight: bold;
@@ -29,6 +33,7 @@ h1 span {
     color: red;
 }
 
+/* modificaçao dos botoes*/
 
 .Secret {  
     position: absolute;
@@ -95,13 +100,9 @@ h1 span {
     transform: translateY(4px);
 }
 
-.audio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 30px;
-}
+
+/* modificaçao do texto com scrull*/
+
 
 .text {
     width: 800px;
@@ -128,9 +129,11 @@ h1 span {
     sans-serif;
 }
 
-.audio-player{
-    text-align: center;
-}
+
+/* modificaçao dos botoes dos audios*/
+
+
+
 .play{
     position: absolute;
     right: 400px;
