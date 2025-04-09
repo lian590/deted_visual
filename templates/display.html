@@ -25,19 +25,23 @@
     </button>
 </div>
 
-<div class="audio-player">
-    <audio id="meuAudio" src="/static/audio ai.mp3" preload="auto"></audio>
-     
-    <button class="play" onclick="tocarAudio()">▶️ </button>
-    <button class="pause" onclick="pausarAudio()">⏸️ </button>
-    <button class="replay" onclick="reiniciarAudio()">🔁 </button>
-
-        
+<div class="audio-container">
+    <h1>Áudio</h1>
+    <div class="audio-player">
+        <audio id="meuAudio" src="/static/audio ai.mp3" preload="auto"></audio>
+        <div class="buttons">
+            <button class="play" onclick="tocarAudio()">▶️</button>
+            <button class="pause" onclick="pausarAudio()">⏸️</button>
+            <button class="replay" onclick="reiniciarAudio()">🔁</button>
+        </div>
+        <div class="timer" id="timer">00:00</div>
+    </div>
 </div>
+
 </div>     
 <div class="text" > <!--scroll-->
     <div class="texte"><!--texto-->
-            h2 class="titulo-scrull">Você sabe o que e o acesso rapido? </h2>
+        <h2> class="titulo-scrull">Você sabe o que e o acesso rapido? </h2>
         <p>O acesso rapido nasceu para facilitar e verificar a entrada de funcionarios, professores e alunos na "e.e. caetano de campos aclimacao", registrando a sua presença.</p>
             
         <h3 class="titulo-scrull">Quais beneficios trazem o "acesso rapido"? </h3>
