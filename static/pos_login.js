@@ -38,6 +38,9 @@ function closeFrame() {
    document.getElementById("frameContent").innertHTML = "";
 }
 
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('video');
 
