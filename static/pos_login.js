@@ -37,3 +37,20 @@ function closeFrame() {
    document.getElementById("frameContainer").style.display = "none";
    document.getElementById("frameContent").innertHTML = "";
 }
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('video');
+
+    // Solicita acesso à câmera
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        .then((stream) => {
+            video.srcObject = stream;
+        })
+        .catch((err) => {
+            console.error("Erro ao acessar a câmera: ", err);
+            alert("Não foi possível acessar a câmera.");
+        });
+});
