@@ -65,3 +65,7 @@ body {
     color: rgb(255, 255, 255);
     text-align: center;
 }
+.camera {
+    border: 10px;
+    border-radius: 1000px;
+}
