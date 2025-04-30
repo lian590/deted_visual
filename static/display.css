@@ -1,19 +1,27 @@
-/* styles.css */
+html {
+    background-image: url(caetano\ png.png);
+}
+
+
+
+
+
+
+/* modifiaçao do texto scrull*/
+
 body {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 255));
-    font-family: Arial, sans-serif;
+    
+    
 }
+/* MODIFICAÇAO DO TITULO CAETANO DE CAMPOS*/
 
-.container {
-    text-align: center;
-}
 
-h1 {
+.titulo-detect-visual {
     font-size: 3em;
     font-weight: bold;
     color: black;
@@ -29,10 +37,11 @@ h1 span {
     color: red;
 }
 
+/* modificaçao dos botoes*/
 
 .Secret {  
     position: absolute;
-    top: 250px;
+    top: 350px;
     right: 100px;
     width: 350px;
     height: 100px;
@@ -44,7 +53,7 @@ h1 span {
     text-decoration: none;
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: rgb(252, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 5px, 5px 0px #000;
@@ -65,7 +74,7 @@ h1 span {
 
 .Direct {  
     position: absolute;
-    top: 450px;
+    top: 500px;
     right: 100px;
     width: 350px;
     height: 100px;
@@ -77,17 +86,17 @@ h1 span {
     text-decoration: none;
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 5px, 5px 0px #000;
     transition: all 0.3s ease;
 }
 .Direct:hover {
-    background-color: whitesmoke;
-    color: red;
-    border: 2px solid red;
-    box-shadow: 5px 5px 0px red;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 0px rgb(0, 0, 0);
 }
 .Direct:active {
     background-color: yellow;
@@ -95,19 +104,19 @@ h1 span {
     transform: translateY(4px);
 }
 
-.audio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 30px;
+
+/* modificaçao do texto com scrull*/
+
+.titulo-scrull {
+    color: rgb(255, 0, 0);
 }
 
-.text {
+.text {   
     width: 800px;
     height: 400px;
     padding: 15px;
     background-color: none;
+    backdrop-filter: blur(10px);
     overflow: auto;
     position: absolute;
     left: 10px;
@@ -128,36 +137,51 @@ h1 span {
     sans-serif;
 }
 
-.audio-player{
+
+/* modificaçao dos botoes dos audios*/
+
+.audio {
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 675px;
+    top: 300px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-.play{
-    position: absolute;
-    right: 400px;
-    top: 680px;
-    padding: 10px;
-    background-color: cyan;
-    border-radius: 10px;
-    border: none;
-    
-}
-.replay {
-    position: absolute;
-    right: 110px;
-    top: 680px;
-    padding: 10px;
-    background-color: cyan;
-    border-radius: 10px;
-    border: none;
+    width: 250px; /* Defina uma largura fixa ou percentual */
+    margin: 0 auto; /* Centraliza a caixa na página */
+    height: 150px;
 }
 
-.pause {
-    position: absolute;
-    right: 255px;
-    top: 680px;
-    padding: 10px;
-    background-color: cyan;
-    border-radius: 10px;
-    border: none;
+.audio-player {
+    margin-top: 20px;
 }
 
+.controls {
+    margin-top: 10px; /* Espaço entre os botões e o timer */
+}
+
+.botoes-audio {
+    margin: 0px 0;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contador {
+    font-size: 30px;
+    margin-top: 10px; /* Espaço acima do timer */
+}
+
+.boton-d {
+    background-color: rgb(255, 0, 0);
+    border-radius: 25px  ;
+    border: 0px solid;
+}

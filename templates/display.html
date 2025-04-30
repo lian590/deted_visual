@@ -7,69 +7,73 @@
     <link rel="stylesheet" href="/static/display.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Dedect <span>Visual</span></h1>
-    </div>
+<div class="titulo">
+    <h1 class="titulo-detect-visual">Dedect <span>Visual</span></h1>
+</div>
 
-    <div>
-        <button class="Secret"
-        onclick="window.location.href='secretaria.html';">
-        Secretaria
-        </button>
-    </div>
+<div>
+    <button class="Secret"
+    onclick="window.location.href='secretaria.html';">
+    Secretaria
+    </button>
+</div>
 
-    <div>
-        <button class="Direct"
-        onclick="window.location.href='login.html';">
-        Diretoria
-        </button>
-    </div>
+<div>
+    <button class="Direct"
+    onclick="window.location.href='login.html';">
+    Diretoria
+    </button>
+</div>
 
+<div class="audio">
+    <h1>Áudio</h1>
     <div class="audio-player">
         <audio id="meuAudio" src="/static/audio ai.mp3" preload="auto"></audio>
-     
-        <button class="play" onclick="tocarAudio()">▶️ </button>
-        <button class="pause" onclick="pausarAudio()">⏸️ </button>
-        <button class="replay" onclick="reiniciarAudio()">🔁 </button>
-
-        
-    </div>
-    </div>     
-    <div class="text" > <!--scroll-->
-        <div class="texte"><!--texto-->
-            <h2>Você sabe o que e o acesso rapido? </h2>
-            <p>O acesso rapido nasceu para facilitar e verificar a entrada de funcionarios, professores e alunos na "e.e. caetano de campos aclimacao", registrando a sua presença.</p>
-            
-            <h3>Quais beneficios trazem o "acesso rapido"? </h3>
-            
-            <h4> Controle de acesso: </h4>
-            <p>Controlara a entrada e saida de usuarios da porta da diretoria da unidade educativa caetano de campos.</p>
-            
-            <h4> Facildade de entrada:</h4>
-            <p>A verificaçao automatica de entrada e saida facilitaria o acesso para a unidade educativa.</p>
-            
-            <h4> Segurança: </h4>
-            <p>O projeto definira as pessoas que podem entrar baseado nos dados registrados.</p>
-            
-            <h4> Controle de presença:</h4> 
-            <p>Devido a automatizaçao de entrada se o usuario e un funcionario a unidade educativo for entrar apos a verificaçao, a presença dela sera registrada.</p>
-            
-            <h3>Funcionamento da aplicação:</h3>
-            
-                <p> Reconhecimento facial: com base na foto registrada no banco de dados, o <a href="https://www.significados.com.br/software/">software</a> ira comparar semelhanças a imagem mostrada na camera em tempo real.</p>
-                
-                <p> E se nao reconheceu, caso aconteça, vai aparecer uma notificação no computador local, onde vai ter a opção de abrir a porta ou recusar a entrada.</p>
-                
-                <h3>Facilidade de acesso Web:</h3>
-                
-                <p>  Aplicação Web e otimização do site, facilitando a interação do usuario com a plataforma.</p>
-                
-                <p>  Acesso para login e cadastro, feito pelo email e senha.</p>
-                
-                <p>O acesso rapido servira muito mais como um aplicativo, ele ajudará e ira facilitar a segurança e o controle de entrada.</p>
-            </div>
+        <div class="botoes-audio">
+            <button class="boton-d" onclick="tocarAudio()">▶️</button>
+            <button class="boton-d" onclick="pausarAudio()">⏸️</button>
+            <button class="boton-d" onclick="reiniciarAudio()">🔁</button>
         </div>
+        <div class="contador" id="timer">00:00</div>
+    </div>
+</div>
+
+</div>     
+<div class="text" > <!--scroll-->
+    <div class="texte"><!--texto-->
+        <h2>Você sabe o que e o acesso rapido? </h2>
+        <p>O acesso rapido nasceu para facilitar e verificar a entrada de funcionarios, professores e alunos na "e.e. caetano de campos aclimacao", registrando a sua presença.</p>
+            
+        <h3 class="titulo-scrull">Quais beneficios trazem o "acesso rapido"? </h3>
+            
+        <h4 class="titulo-scrull"> Controle de acesso: </h4>
+        <p>Controlara a entrada e saida de usuarios da porta da diretoria da unidade educativa caetano de campos.</p>
+            
+        <h4 class="titulo-scrull"> Facildade de entrada:</h4>
+        <p>A verificaçao automatica de entrada e saida facilitaria o acesso para a unidade educativa.</p>
+            
+        <h4 class="titulo-scrull"> Segurança: </h4>
+        <p>O projeto definira as pessoas que podem entrar baseado nos dados registrados.</p>
+            
+        <h4 class="titulo-scrull"> Controle de presença:</h4> 
+        <p>Devido a automatizaçao de entrada se o usuario e un funcionario a unidade educativo for entrar apos a verificaçao, a presença dela sera registrada.</p>
+            
+        <h3 class="titulo-scrull">Funcionamento da aplicação:</h3>
+            
+            <p> Reconhecimento facial: com base na foto registrada no banco de dados, o <a href="https://www.significados.com.br/software/">software</a> ira comparar semelhanças a imagem mostrada na camera em tempo real.</p>
+                
+            <p> E se nao reconheceu, caso aconteça, vai aparecer uma notificação no computador local, onde vai ter a opção de abrir a porta ou recusar a entrada.</p>
+                
+            <h3 class="titulo-scrull">Facilidade de acesso Web:</h3>
+                
+            <p>  Aplicação Web e otimização do site, facilitando a interação do usuario com a plataforma.</p>
+                
+            <p>  Acesso para login e cadastro, feito pelo email e senha.</p>
+                
+            <p>O acesso rapido servira muito mais como um aplicativo, ele ajudará e ira facilitar a segurança e o controle de entrada.</p>
+        </div>
+    </div>
         <script src="/static/display.js "></script>
-        </body>
-        </html>
+    </body>
+</html>
         
