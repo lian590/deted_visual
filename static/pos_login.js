@@ -54,3 +54,9 @@ window.addEventListener('DOMContentLoaded', () => {
             alert("Não foi possível acessar a câmera.");
         });
 });
+
+
+function mostrarCampo() {
+  document.getElementById('campoTexto').style.display = 'block';
+}
+

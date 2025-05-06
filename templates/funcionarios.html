@@ -1,6 +1,32 @@
-<li>ll</li>
-<li>uu</li>
-<li>gg</li>
-<li>vbb</li>
-<li>vvv</li>
-<h1> hola mundo</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+    <link rel="stylesheet" href="/static/prof.css">
+</head>
+<body>
+    <h1>Lista de Funcionarios</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <!-- Substitua pelos nomes das colunas da sua tabela -->
+                <button onclick="window.location.href='/'">Voltar</button>
+                <button onclick="window.location.href='/'">Voltar</button>
+                <button onclick="window.location.href='/'">Voltar</button>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in dados %}
+            <tr>
+                <td>{{ row['id'] }}</td>
+                <td>{{ row['nome'] }}</td>
+                <td>{{ row['disciplina'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="window.location.href='/'">Voltar</button>
+</body>
+</html>
