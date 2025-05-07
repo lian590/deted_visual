@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caetano Cadastro</title>
-    <link rel="stylesheet" href="/static/cadastro.css">
-     <script src="cadastro.js"></script>
+    <link rel="stylesheet" href="/static/cadastro2.css">
 </head>
 <body>
     <div class="container">
         <div class="register-box">
-           <div class="camera">
-            <video id="video" autoplay></video>
-            <button id="startButton">Iniciar Câmera</button>
             <h2>Cadastro</h2>
+
+            <form action="documento.php" method="post" enctype="multipart/form-data">
+
             <div class="form-group">
-                <input type="text" placeholder="Nome Completo">
+                <input type="text" placeholder="RG">
             </div>
+
             <div class="form-group">
                 <input type="email" placeholder="Email">
             </div>
+
+            <div class="imagen">
+                <label for="imagen" > 
+                    Escolha uma imagem:
+                </label>
+                <input type="file" name="image," id="imagem" accept="image/*" required>
+                  
+            </div>
+
             <div class="form-group">
                 <input type="password" placeholder="Senha">
             </div>
+
             <div class="form-group">
                 <input type="password" placeholder="Confirmar Senha">
             </div>
+
+            </form>
+
             <button class="btn">Cadastrar</button>
+            
+
+
             <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
         </div>
         <div>
@@ -34,6 +50,10 @@
             <h2 class="school-name">E.E Caetano de Campos</h2>
         </div>
     </div>
-   </div> 
+
+    <div>
+
+
+    </div>
 </body>
 </html>

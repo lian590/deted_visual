@@ -1,1 +1,30 @@
-<li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Coordenadores</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Lista de Coordenadores</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            
+        </tr>
+        {% for coord in dados %}
+        <tr>
+            <td>{{ coord.id }}</td>
+            <td>{{ coord.nome }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
