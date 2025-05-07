@@ -35,7 +35,7 @@ body {
     color: red;
 }
 .form-group {
-    width: 90%;
+    width: 91%;
     margin-bottom: 15px;
 }
 .form-group input {
@@ -65,7 +65,29 @@ body {
     color: rgb(255, 255, 255);
     text-align: center;
 }
-.camera {
-    border: 10px;
-    border-radius: 1000px;
+
+
+
+.imagen {
+    display: inline-block;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    
+    font-size: 14px;
+    text-align: drift 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 290px;
+    padding: 0px;
+    margin-bottom: 15px;
+    
+    
+
 }
+.imagen input {
+    padding: 4px;
+    
+}
+
