@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professores</title>
-    <link rel="stylesheet" href="/static/prof.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
 </head>
 <body>
     <h1>Lista de Professores</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <!-- Substitua pelos nomes das colunas da sua tabela -->
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Disciplina</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in dados %}
-            <tr>
-                <td>{{ row['id'] }}</td>
-                <td>{{ row['nome'] }}</td>
-                <td>{{ row['disciplina'] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            
+        </tr>
+        {% for coord in dados %}
+        <tr>
+            <td>{{ coord.id }}</td>
+            <td>{{ coord.nome }}</td>
+
+        </tr>
+        {% endfor %}
     </table>
-    <button onclick="window.location.href='/'">Voltar</button>
 </body>
 </html>

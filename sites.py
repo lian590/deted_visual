@@ -32,7 +32,16 @@ def funcionarios():
 
 @app.route('/b')
 def professores():
-    return render_template('professores.html')
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM professores")
+    dados = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('professores.html', dados=dados)
 
 
 @app.route('/a')
