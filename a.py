@@ -14,9 +14,9 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 # --- Configurações do Banco de Dados ---
 DB_HOST = "localhost"
 DB_USER = "root"  # Substitua pelo seu usuário do MySQL
-DB_PASSWORD = "11010412@Pao"  # Substitua pela sua senha do MySQL
-DB_NAME = "test_visual"  # Substitua pelo nome do seu banco de dados
-TABELA_ROSTOS = "Imagens_salvas"
+DB_PASSWORD = "93845208"  # Substitua pela sua senha do MySQL
+DB_NAME = "ks"  # Substitua pelo nome do seu banco de dados
+TABELA_ROSTOS = "imagens_salvas"
 
 def conectar_banco():
     """Conecta ao banco de dados MySQL."""

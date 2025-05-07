@@ -34,9 +34,18 @@ def funcionarios():
 def professores():
     return render_template('professores.html')
 
+
 @app.route('/a')
 def coordenadores():
-    return render_template('coordenadores.html')
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor(dictionary=True)
 
+    cursor.execute("SELECT * FROM imagens_salvas")
+    dados = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('coordenadores.html', dados=dados)
 if __name__ == '__main__':
     app.run(debug=True)
