@@ -18,11 +18,7 @@ conn.commit()
 
 # Inicializar o MediaPipe FaceMesh
 mp_face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
-mp_drawing = mp.solutions.drawing_utils
-
-# Função para detectar e salvar rostos
-def detect_and_save_face(frame):
-    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+mp_drawing = mp.solutions.drawing_ame, cv2.COLOR_BGR2RGB)
     result = mp_face_mesh.process(rgb_frame)
     
     if result.multi_face_landmarks:
@@ -87,3 +83,8 @@ if __name__ == "__main__":
 
     # Fechar a conexão com o banco de dados
     conn.close()
+utils
+
+# Função para detectar e salvar rostos
+def detect_and_save_face(frame):
+    rgb_frame = cv2.cvtColor(fr

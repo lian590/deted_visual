@@ -32,32 +32,6 @@ def conectar_banco():
         print(f"Erro ao conectar ao MySQL: {err}")
         return None
 
-def criar_tabela():
-    """Cria a tabela no banco de dados se ela não existir."""
-    mydb = conectar_banco()
-    if mydb:
-        mycursor = mydb.cursor()
-        query = f"""
-        CREATE TABLE IF NOT EXISTS {TABELA_ROSTOS} (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            nome VARCHAR(255) NOT NULL,
-            data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
-            imagem_bytes MEDIUMBLOB
-        )
-        """
-        try:
-            mycursor.execute(query)
-            mydb.commit()
-            print(f"Tabela '{TABELA_ROSTOS}' criada ou já existente.")
-        except mysql.connector.Error as err:
-            print(f"Erro ao criar tabela: {err}")
-        finally:
-            mycursor.close()
-            mydb.close()
-
-# Criar a tabela se não existir
-criar_tabela()
-
 # Carregar os rostos salvos (do disco)
 def carregar_rostos_disco():
     dados = []
@@ -81,7 +55,10 @@ def cadastrar_rosto(frame, gray):
     if len(rostos) == 0:
         print("Nenhum rosto detectado. Tente de novo.")
         return
+    
     nome = input("Digite o nome da pessoa: ").strip()
+    idade = input("Digite a idade da pessoa: ").strip()
+   
     mydb = conectar_banco()
     if not mydb:
         return
@@ -98,8 +75,8 @@ def cadastrar_rosto(frame, gray):
         _, imagem_codificada = cv2.imencode('.jpg', rosto_resized)
         imagem_bytes = imagem_codificada.tobytes()
 
-        query = f"INSERT INTO {TABELA_ROSTOS} (nome, imagem_bytes) VALUES (%s, %s)"
-        values = (nome, imagem_bytes)
+        query = f"INSERT INTO {TABELA_ROSTOS} (nome, idade, imagem_bytes) VALUES (%s, %s, %s, %s, %s)"
+        values = (nome, idade, imagem_bytes)
         try:
             mycursor.execute(query, values)
             mydb.commit()
