@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="/static/adm.css">
+    <title>E.E. Caetano de Campos</title>
+
 </head>
 <body>
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <h1>E.E. Caetano de <br> Campos</h1>
+            </div>
+            <button id="menu-btn" class="menu-btn">&#9776;</button>
+            <div id="menu" class="menu">
+                <nav class="lista">
+                    <ul class="ul">
+                    <li onclick="openFrame( 'c' )">Funcionarios</li>
+                    <li onclick="openFrame( 'b' )">Professores</li>
+                    <li onclick="openFrame( 'a' )">Coordenadores</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div id="frameContainer" class="hidden">
+            <div class="frameContent">
+                <span class="closeButton" onclick="closeFrame()">X</span>
+                <div id="frameContent"></div>
+            </div>
+        </div>
 
-    <button class="btn">Cadastrar</button>
+    
 
+    <div class="right">
+        <div class="camera">
+            <video id="video" class="cam_video" width="100%" autoplay></video>
+        </div>
+    </div>
+    <script src="/static/pos_login.js"></script>
 </body>
 </html>

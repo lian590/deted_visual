@@ -11,7 +11,7 @@ db_config = {
     'database': 'ks'
 }
 
-@app.route('/')
+@app.route('/pos_login')
 def pos_login():
     
     conn = mysql.connector.connect(**db_config)
@@ -25,6 +25,32 @@ def pos_login():
     cursor.close()
     conn.close()
     return render_template('pos_login.html', dados=dados)
+
+@app.route('/')
+def display():
+
+    return render_template('display.html')
+
+@app.route('/cadastro')
+def cadastro():
+    return render_template('cadastro.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html') 
+
+@app.route('/adm')
+def adm():
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM professores")
+    dados = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('adm.html')
 
 @app.route('/c')
 def funcionarios():
