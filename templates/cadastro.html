@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caetano Cadastro</title>
     <link rel="stylesheet" href="/static/cadastro.css">
-     <script src="cadastro.js"></script>
+     <script src="/static/cadastro.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="register-box">
            <div class="camera">
-            <video id="video" autoplay></video>
-            <button id="startButton">Iniciar Câmera</button>
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <button onclick="tirarFoto()">Tirar e Enviar</button>
+           </div>
             <h2>Cadastro</h2>
             <div class="form-group">
                 <input type="text" placeholder="Nome Completo">
@@ -25,6 +27,7 @@
             </div>
             <div class="form-group">
                 <input type="password" placeholder="Confirmar Senha">
+            </div>
             </div>
             <button class="btn">Cadastrar</button>
             <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
