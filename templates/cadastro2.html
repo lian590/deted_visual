@@ -4,56 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caetano Cadastro</title>
-    <link rel="stylesheet" href="/static/cadastro2.css">
+    <link rel="stylesheet" href="/static/css/cadastro2.css">
 </head>
 <body>
     <div class="container">
-        <div class="register-box">
-            <h2>Cadastro</h2>
-
-            <form action="documento.php" method="post" enctype="multipart/form-data">
-
-            <div class="form-group">
-                <input type="text" placeholder="RG">
-            </div>
-
-            <div class="form-group">
-                <input type="email" placeholder="Email">
-            </div>
-
-            <div class="imagen">
-                <label for="imagen" > 
-                    Escolha uma imagem:
-                </label>
-                <input type="file" name="image," id="imagem" accept="image/*" required>
-                  
-            </div>
-
-            <div class="form-group">
-                <input type="password" placeholder="Senha">
-            </div>
-
-            <div class="form-group">
-                <input type="password" placeholder="Confirmar Senha">
-            </div>
-
-            </form>
-
-            <button class="btn">Cadastrar</button>
-            
-
-
-            <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+        <div class="logo-container">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flash-messages">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
         </div>
+        <div class="register-box">
+            <form action="{{ url_for('cadastro') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="number" name="cpf_pk" placeholder="RG" required oninput="this.value=this.value.replace(/[^0-9]/g, '')">
+                </div>
+            
+                <div class="form-group" method="POST">
+                   email: <input type="email" name="sk_email" placeholder="Email" required>
+                </div>
+            
+                <div class="imagen">
+                    <label for="imagem">Escolha uma imagem:</label>
+                    <input type="file" name="image" id="imagem" accept="image/*" required>
+                </div>
+            
+                <div class="form-group">
+                    <input type="password" name="senha_1" placeholder="Senha" required>
+                </div>
+            
+                <div class="form-group">
+                    <input type="password" name="senha_2" placeholder="Confirmar Senha" required>
+                </div>
+            
+                <button class="btn" type="submit">Cadastrar</button>
+            </form>
+        </div>
+
         <div>
             <h1><span class="highlight">Caetano</span> Cadastro</h1>
             <h2 class="school-name">E.E Caetano de Campos</h2>
         </div>
-    </div>
-
-    <div>
-
-
     </div>
 </body>
 </html>
