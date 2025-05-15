@@ -20,7 +20,7 @@ function tirarFoto() {
 
   console.log("Base64 enviada:", imagemBase64.slice(0, 30));
 
-  fetch("http://127.0.0.1:5000/upload", {
+  fetch("http://127.0.0.1:5501/upload", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -28,7 +28,7 @@ function tirarFoto() {
     body: JSON.stringify({ image: imagemBase64 })
   })
   .then(response => response.json())
-  .then(data => {
+  .then(data => {+
     alert(data.message);
   })
   .catch(err => {
