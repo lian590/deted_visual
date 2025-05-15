@@ -4,6 +4,10 @@ import base64
 import os
 from datetime import datetime
 
+# Pasta de upload
+UPLOAD_FOLDER = os.path.join(os.getcwd(), "upload")
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -24,9 +28,7 @@ def cadastro():
 def pos():
     return render_template("pos_login.html")
 
-# Pasta de upload
-UPLOAD_FOLDER = os.path.join(os.getcwd(), "upload")
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 
 # Rota para upload da imagem
 @app.route('/upload', methods=["GET", "POST"])
