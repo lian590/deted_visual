@@ -23,7 +23,7 @@ def pos_login():
     cursor = conn.cursor(dictionary=True)
     
     # Consultando os dados
-    cursor.execute("SELECT * FROM professores") 
+    cursor.execute("SELECT * FROM funcionario") 
     dados = cursor.fetchall()
     
     # Fechando a conexão
@@ -75,7 +75,7 @@ def cadastro():
         conn = mysql.connector.connect(**db_config)
         cursor = conn.cursor()
 
-        cursor.execute("INSERT INTO funcionario (cpf_pk, sk_email, senha, imagem) VALUES (%s, %s, %s, %s)", (rg, email, senha_hash, caminho))
+        cursor.execute("INSERT INTO funcionario(cpf_pk, sk_email, senha, imagem) VALUES (%s, %s, %s, %s)", (rg, email, senha_hash, caminho))
         conn.commit()
 
         # Fechando a conexão
@@ -92,7 +92,7 @@ def cadastro():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form['sk_email']
+        cp = request.form['cpf_pk']
         senha = request.form['senha']
 
         # Conectar ao banco
@@ -100,7 +100,7 @@ def login():
         cursor = conn.cursor(dictionary=True)
 
         # Buscar usuário só pelo e-mail
-        cursor.execute("SELECT * FROM funcionarios WHERE sk_email = %s", (email,))
+        cursor.execute("SELECT * FROM funcionario WHERE cpf_pk = %s", (cp,))
         usuario = cursor.fetchone()
 
         # Verificar senha

@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Caetano Login</title>
-        <link rel="stylesheet" href="/static/css/login.css">
-
-    </head>
-    <body>
-        <div class="container">
-            <div class="login-visual">
-                <h2>Login</h2>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caetano Login</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-visual">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
                 <div class="form-group">
-                    <form action="/login" method="POST">
-                    <input type="text" nome="cpf_pk" placeholder="Usuário">
+                    <input type="text" name="cpf_pk" placeholder="Usuário" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" nome="senha" placeholder="Senha">
+                    <input type="password" name="senha" placeholder="Senha" required>
                 </div>
-                <button class="btn">Entrar</button>
-                <p class="register">Não tem uma conta? <a href="cadastro2.html">Cadastre-se</a></p>
-            </div>
-            
+                <button class="btn" type="submit">Entrar</button>
+            </form>
+            <p class="register">Não tem uma conta? <a href="cadastro">Cadastre-se</a></p>
         </div>
-        <div>
-            <h1><span class="highlight">Caetano</span> login</h1>
-            <h2 class="school-name">E.E Caetano de Campos</h2>
-        </div>
-    </body>
-    </html>
+    </div>
+    <div>
+        <h1><span class="highlight">Caetano</span> login</h1>
+        <h2 class="school-name">E.E Caetano de Campos</h2>
+    </div>
+</body>
+</html>
