@@ -61,8 +61,8 @@ h1 span {
 }
 .Secret:hover {
     background-color: whitesmoke;
-    color: red;
-    border: 2px solid red;
+    color: rgb(8, 6, 6);
+    border: 2px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 0px red;
 }
 .Secret:active {

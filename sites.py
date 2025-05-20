@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 import mysql.connector
+import time
 
 
 app = Flask(__name__)

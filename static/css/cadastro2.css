@@ -47,8 +47,8 @@ body {
 .btn {
     width: 100%;
     padding: 12px;
-    background: red;
-    color: white;
+    background: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -98,12 +98,13 @@ body {
         padding: 10px;
         background-color: none;
         color: black;
-        border: 1px solid #ffb3b3;
+        border: 1px solid #000000;
         margin-bottom: 20px;
         border-radius: 5px;
-        top: 0px;
+        top: -450px;
         display: flex;
-        left: 0px;
+        left: 600px;
+        position: relative;
 }
 
 input[type="number" ]::-webkit-outer-spin-button,
