@@ -37,8 +37,6 @@ def display():
 
     return render_template('display.html')
 
-import os
-from werkzeug.utils import secure_filename
 
 
 
