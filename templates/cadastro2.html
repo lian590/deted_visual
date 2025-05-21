@@ -57,3 +57,126 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caetano Cadastro</title>
+  <link rel="stylesheet" href="/static/cadastro2.css">
+  <style>
+    /* Estilos básicos para responsividade */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .register-box {
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .imagen label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .imagen input {
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .highlight {
+      color: #007bff;
+    }
+
+    .school-name {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="register-box">
+      <h2>Cadastro</h2>
+      <form action="documento.php" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <input type="text" name="rg" placeholder="RG" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="imagen">
+          <label for="imagem">Escolha uma imagem:</label>
+          <input type="file" name="imagem" id="imagem" accept="image/*" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="senha" placeholder="Senha" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
+        </div>
+
+        <button type="submit" class="btn">Cadastrar</button>
+      </form>
+
+      <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+    </div>
+
+    <div>
+      <h1><span class="highlight">Caetano</span> Cadastro</h1>
+      <h2 class="school-name">E.E Caetano de Campos</h2>
+    </div>
+  </div>
+</body>
+</html>
