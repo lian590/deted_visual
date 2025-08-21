@@ -61,3 +61,8 @@ def upload_image():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+""""# Instruções para uso:
+1. Certifique-se de ter o Flask e Flask-CORS instalados."""
