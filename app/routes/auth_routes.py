@@ -8,7 +8,12 @@ import os
 auth = Blueprint('auth', __name__)
 
 # CONFIG (coloque o db_config de forma adequada ou importe de config.py)
-from config import db_config
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': '93845208',
+    'database': 'pk'
+}
 
 @auth.route('/pos_login')
 def pos_login():
