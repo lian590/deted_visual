@@ -81,8 +81,8 @@ body {
     cursor: pointer;
             }
     .button.red {
-    background-color: red;
-    border: 2px solid black;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(247, 219, 219);
             }
     .button.green {
     background-color: green;
@@ -164,7 +164,7 @@ body {
      .ul li {
         display: block;
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         font-size: 20px;
         font-weight: bold;
         padding: 0;
@@ -176,7 +176,7 @@ body {
      }
 
      .ul li:hover {
-        background-color: rgb(255, 0, 0);
+        background-color: rgb(0, 0, 0);
         transition: background-color 1s ease;
         
      }

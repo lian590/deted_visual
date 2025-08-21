@@ -4,8 +4,6 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(to right, white, red);
 }
 .container {
@@ -26,6 +24,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    position: absolute;
+    left: 38%;
 }
 .title {
     font-size: 28px;
@@ -47,8 +47,8 @@ body {
 .btn {
     width: 100%;
     padding: 12px;
-    background: red;
-    color: white;
+    background: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -91,3 +91,34 @@ body {
     
 }
 
+
+
+.logo-container {
+        list-style: none;
+        padding: 10px;
+        background-color: none;
+        color: black;
+        border: 1px solid #000000;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        top: -450px;
+        display: flex;
+        left: 600px;
+        position: relative;
+}
+
+input[type="number" ]::-webkit-outer-spin-button,
+input[type="number" ]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number" - "e] {"] {
+  appearance: none;
+}
+
+.logo {
+    left: 68%;
+    position: relative;
+
+}

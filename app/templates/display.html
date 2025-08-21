@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detect Visual</title>
-    <link rel="stylesheet" href="/static/display.css">
+    <link rel="stylesheet" href="/static/css/display.css">
 </head>
 <body>
+    <div class="barra">hhhhhhhhhhhhhhhhhh</div>
 <div class="titulo">
     <h1 class="titulo-detect-visual">Dedect <span>Visual</span></h1>
 </div>
 
-<div>
-    <button class="Secret"
-    onclick="window.location.href='cadastro';">
+<div class="buton-secret">
+    <a href="{{ url_for('auth.cadastro') }}">
+    <button class="Secret">
     Secretaria
     </button>
+    </a>
 </div>
 
-<div>
+<div class="diretoria">
     <button class="Direct"
     onclick="window.location.href='login';">
     Diretoria

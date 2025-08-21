@@ -1,90 +1,63 @@
-import cv2
-import sqlite3
-import numpy as np
-import mediapipe as mp
+from flask import Flask, request, render_template, jsonify
+from flask_cors import CORS
+import base64
+import os
+from datetime import datetime
 
-# Conectar ao banco de dados
-conn = sqlite3.connect('faces.db')
-cursor = conn.cursor()
+# Pasta de upload
+UPLOAD_FOLDER = os.path.join(os.getcwd(), "upload")
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Criar a tabela 'faces' se ela não existir
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS faces (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    face_image BLOB
-)
-''')
-conn.commit()
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
-# Inicializar o MediaPipe FaceMesh
-mp_face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
-mp_drawing = mp.solutions.drawing_ame, cv2.COLOR_BGR2RGB)
-    result = mp_face_mesh.process(rgb_frame)
-    
-    if result.multi_face_landmarks:
-        landmarks = result.multi_face_landmarks[0].landmark
-        face = np.array([[landmarks[i].x, landmarks[i].y, landmarks[i].z] for i in range(468)])
-        return face
-    return None
+# Rotas HTML
+@app.route('/')
+def home():
+    return render_template("display.html")
 
-# Função para salvar o rosto no banco de dados
-def save_face_to_db(face_embedding):
-    cursor.execute('INSERT INTO faces (face_image) VALUES (?)', (face_embedding,))
-    conn.commit()
+@app.route('/login.html')
+def login():
+    return render_template("login.html")
 
-# Função para comparar rostos
-def compare_faces(face_embedding_1, face_embedding_2):
-    # Uma simples comparação de distância
-    distance = np.linalg.norm(face_embedding_1 - face_embedding_2)
-    return distance
+@app.route('/cadastro.html')
+def cadastro():
+    return render_template("cadastro.html")
 
-# Função para rastrear rostos e salvar/comparar
-def face_tracking():
-    cap = cv2.VideoCapture(0)
-    face_count = 0
-    face_embeddings = []
+@app.route('/pos_login.html')
+def pos():
+    return render_template("pos_login.html")
 
-    while True:
-        _, frame = cap.read()
-        face_embedding = detect_and_save_face(frame)
 
-        if face_embedding is not None:
-            face_embedding = face_embedding.flatten()
 
-            if face_count < 2:
-                # Salva os dois primeiros rostos
-                save_face_to_db(face_embedding)
-                face_embeddings.append(face_embedding)
-                face_count += 1
-                cv2.putText(frame, f'Rosto {face_count} salvo!', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            else:
-                # Compara com os dois primeiros rostos
-                distance_1 = compare_faces(face_embedding, face_embeddings[0])
-                distance_2 = compare_faces(face_embedding, face_embeddings[1])
+# Rota para upload da imagem
+@app.route('/upload', methods=["GET", "POST"])
+def upload_image():
+    try:
+        data = request.get_json()
+        image_data = data.get("image", "")
+        
+        print("Imagem recebida (início):", image_data[:30])
 
-                if distance_1 < 0.6:
-                    cv2.putText(frame, "Este é o Rosto 1!", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
-                elif distance_2 < 0.6:
-                    cv2.putText(frame, "Este é o Rosto 2!", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
-                else:
-                    cv2.putText(frame, "Rosto não reconhecido!", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+        if "," in image_data:
+            image_base64 = image_data.split(",")[1]
+        else:
+            return jsonify({'message': 'Formato de imagem inválido'}), 400
 
-        cv2.imshow('Face Tracking', frame)
+        image_bytes = base64.b64decode(image_base64)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+        # Gera nome único para a imagem
+        filename = f"foto_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
+        filepath = os.path.join(UPLOAD_FOLDER, filename)
 
-    cap.release()
-    cv2.destroyAllWindows()
+        with open(filepath, "wb") as f:
+            f.write(image_bytes)
 
-# Rodar o rastreamento de rosto
+        return jsonify({'message': f'Imagem salva com sucesso como {filename}!'})
+
+    except Exception as e:
+        print("Erro ao processar imagem:", e)
+        return jsonify({'message': 'Erro ao salvar imagem'}), 500
+
 if __name__ == "__main__":
-    face_tracking()
-
-    # Fechar a conexão com o banco de dados
-    conn.close()
-utils
-
-# Função para detectar e salvar rostos
-def detect_and_save_face(frame):
-    rgb_frame = cv2.cvtColor(fr
+    app.run(debug=True)

@@ -6,36 +6,8 @@ body {
     display: flex;
     height: 100vh;
             }
-            /*
     .left {
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 0, 0));
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-            }
-    .left .title {
-    position: absolute;
-    top: 1%;
-    text-align: center;
-    
-            }
-    .left .title h1 {
-    display: block;
-    -webkit-text-stroke: 3px black;  Define a borda automaticamente 
-            } 
-    .left .title .white {
-    color: rgb(255, 255, 255);
-    border: 2px solid black;
-            }
-            */
-    .left {
-    background-image: url(caetano\ png.png);    
+    background-image: url(/static/imagens/caetano\ png.png);    
     width: 70%;
     background-repeat: no-repeat;
     background-size: cover;
