@@ -21,7 +21,7 @@ face_cascade = cv2.CascadeClassifier(
 )
 
 # ---------- Utilidades ----------
-def conectar_banco():
+def conectar_banco():               
     try:
         return mysql.connector.connect(
             host=DB_HOST,
@@ -75,11 +75,11 @@ def cadastrar_rosto(gray, nomes_existentes):
     for (x, y, w, h) in rostos:
         # ----- salva local -----
         caminho_local = os.path.join(PASTA_ROSTOS, f"{nome}.jpg")
-        cv2.imwrite(caminho_local, rosto_resized)
+        cv2.imwrite(caminho_local)
         print(f"Rosto de {nome} salvo em {caminho_local}")
 
         # ----- salva no banco -----
-        _, buf = cv2.imencode(".jpg", rosto_resized)
+        _, buf = cv2.imencode(".jpg")
         try:
             cur.execute(
                 f"""
