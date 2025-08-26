@@ -1,11 +1,3 @@
-/* Fundo bonito e responsivo */
-html {
-    background-image: url(/static/imagens/caetano\ png.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* Corpo centralizado e espaçado */
 body {
     margin: 0;
@@ -16,13 +8,15 @@ body {
     gap: 40px;
     min-height: 100vh;
     box-sizing: border-box;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 11, 210));
+
 }
 
 /* Título centralizado */
 .titulo-detect-visual {
     font-size: 3em;
     font-weight: bold;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-top: 20px;
 }
@@ -164,11 +158,3 @@ button {
 }
 
 
-.barra {
-    width: 100%;
-    height: 2%;
-    background-color: red;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-}
