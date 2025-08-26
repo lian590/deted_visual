@@ -18,7 +18,7 @@ body {
     height: 450px;
     border: 2px solid black;
     border-radius: 15px;
-    background: white;
+    background: #94b3fd;
     display: flex;
     flex-direction: column;
     align-items: center;
