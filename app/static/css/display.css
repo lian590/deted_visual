@@ -51,7 +51,7 @@ h1 span {
 }
 
 .Secret:active {
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     box-shadow: none;
     transform: translateY(4px);
 }
