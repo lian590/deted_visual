@@ -7,8 +7,9 @@ body {
     height: 100vh;
             }
     .left {
+    background-image: url(adam.jpg);
     width: 70%;
-      background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
+   background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
     }
     .left .title {
     font-size: 26px;   
