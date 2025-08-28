@@ -7,10 +7,8 @@ body {
     height: 100vh;
             }
     .left {
-    background-image: url(/static/imagens/caetano\ png.png);    
     width: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
+      background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
     }
     .left .title {
     font-size: 26px;   
@@ -22,7 +20,7 @@ body {
     }
     .right {
     width: 30%;
-    background-color: rgb(255, 0, 0);
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,3 +216,4 @@ body {
           border: 1px solid #ccc;
           border-radius: 5px;
         }
+        

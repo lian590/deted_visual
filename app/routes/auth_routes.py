@@ -12,14 +12,14 @@ db_config = {
     'host': 'localhost',
     'user': 'root',
     'password': '93845208',
-    'database': 'pk'
+    'database': 'hell_gate'
 }
 
 @auth.route('/pos_login')
 def pos_login():
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM funcionario")
+    cursor.execute("SELECT * FROM funcionarios")
     dados = cursor.fetchall()
     cursor.close()
     conn.close()
