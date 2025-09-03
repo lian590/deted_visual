@@ -1,0 +1,31 @@
+    <div class="text"> <!-- scroll -->
+        <div class="texte"> <!-- texto -->
+            <h2>Você sabe o que é o acesso rápido?</h2>
+            <audio src="/static/audio ai.mp3" preload="auto" controls></audio>
+            <p>O acesso rápido nasceu para facilitar e verificar a entrada de funcionários, professores e alunos na <em>E.E. Caetano de Campos - Aclimação</em>, registrando a sua presença.</p>
+
+            <h3 class="titulo-scrull">Quais benefícios o “acesso rápido” traz?</h3>
+
+            <h4 class="titulo-scrull">Controle de acesso</h4>
+            <p>Controla a entrada e saída de usuários pela porta da diretoria da unidade educativa Caetano de Campos.</p>
+
+            <h4 class="titulo-scrull">Facilidade de entrada</h4>
+            <p>A verificação automática de entrada e saída facilita o acesso à unidade educativa.</p>
+
+            <h4 class="titulo-scrull">Segurança</h4>
+            <p>O projeto define quais pessoas podem entrar, com base nos dados registrados.</p>
+
+            <h4 class="titulo-scrull">Controle de presença</h4>
+            <p>Devido à automatização de entrada, se o usuário for funcionário da unidade educativa e entrar após a verificação, sua presença será registrada.</p>
+
+            <h3 class="titulo-scrull">Funcionamento da aplicação</h3>
+            <p>Reconhecimento facial: com base na foto registrada no banco de dados, o <a href="https://www.significados.com.br/software/">software</a> compara a imagem captada pela câmera em tempo real.</p>
+
+            <p>Se não houver reconhecimento, aparecerá uma notificação no computador local, com a opção de abrir a porta ou recusar a entrada.</p>
+
+            <h3 class="titulo-scrull">Facilidade de acesso via Web</h3>
+            <p>A aplicação Web foi otimizada para facilitar a interação do usuário com a plataforma.</p>
+            <p>Disponibiliza acesso para login e cadastro, feitos por e-mail e senha.</p>
+            <p>O acesso rápido funciona praticamente como um aplicativo, ajudando a fortalecer a segurança e o controle de entrada.</p>
+        </div>
+    </div>
