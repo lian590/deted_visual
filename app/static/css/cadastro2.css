@@ -72,10 +72,7 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
     text-align: center;
-    position: absolute;
-    top: 0%;
-    left: 45%;
-}
+    top: 0%;}
 
 
 
@@ -83,7 +80,6 @@ body {
     display: inline-block;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    
     font-size: 14px;
     text-align: drift 10px;
     border: none;
@@ -93,29 +89,10 @@ body {
     width: 290px;
     padding: 0px;
     margin-bottom: 15px;
-    
-    
 
 }
 .imagen input {
     padding: 4px;
-    
-}
-
-
-
-.logo-container {
-        list-style: none;
-        padding: 10px;
-        background-color: none;
-        color: black;
-        border: 1px solid #000000;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        top: -450px;
-        display: flex;
-        left: 600px;
-        position: relative;
 }
 
 input[type="number" ]::-webkit-outer-spin-button,
@@ -128,3 +105,20 @@ input[type="number" - "e] {"] {
   appearance: none;
 }
 
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    top: 10vh;
+    left: 40%;
+}
+
+label {
+    display: block;       /* força cada label a ficar acima do input */
+    margin-bottom: 5px;   /* espaço entre o texto e o input */
+    font-weight: bold;    /* deixa o texto mais visível */
+    color: black;         /* define cor (mude se tiver fundo escuro) */
+    font-size: 14px;      /* tamanho amigável */
+}

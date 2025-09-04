@@ -27,11 +27,13 @@
             <h2 class="highlight">Caetano Cadastro</h2>
             <form action="{{ url_for('auth.cadastro') }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="number" name="cpf_pk" placeholder="CPF" required oninput="this.value=this.value.replace(/[^0-9]/g, '')">
+                    <label for="cpf">cpf</label>
+                    <input type="number" name="cpf_pk" placeholder="" id="cpf" required oninput="this.value=this.value.replace(/[^0-9]/g, '')">
                 </div>
             
                 <div class="form-group" method="POST">
-                    <input type="email" name="sk_email" placeholder="Email" required>
+                    <label for="email-">email</label>
+                    <input type="email" name="sk_email" placeholder="" id="email" required>
                 </div>
             
                 <div class="imagen">
@@ -40,11 +42,13 @@
                 </div>
             
                 <div class="form-group">
-                    <input type="password" name="senha_1" placeholder="Senha" required>
+                    <label for="Senha">Senha</label>
+                    <input type="password" name="senha_1" placeholder="" id="Senha" required>
                 </div>
             
                 <div class="form-group">
-                    <input type="password" name="senha_2" placeholder="Confirmar Senha" required>
+                    <label for="senha2">Confirme a Senha</label>
+                    <input type="password" name="senha_2" placeholder=" " id="senha2" required>
                 </div>
             
                 <button class="btn" type="submit">Cadastrar</button>
