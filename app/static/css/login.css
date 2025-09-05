@@ -8,6 +8,15 @@ body {
     align-items: center;
     background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 7, 141));
 }
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
 .container {
     display: flex;
     width: 80%;
@@ -17,18 +26,18 @@ body {
     left: 40%;
     position: absolute;
 }
-.login-visual {
+.register-box {
     width: 300px;
-    height: 450px;
+    height: 480px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background: radial-gradient(circle at center, #1900ff, rgb(0, 0, 0));
-    box-shadow: inset 0 0 200px #ffffffb3;
+    background: #ffffffb3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px;
+    position: absolute;
 }
 .title {
     font-size: 28px;

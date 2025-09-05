@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="login-visual">
+    <div class="main-container">
+
+        <div class="container">
+            <div class="register-box">
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
             <h2 class="login">Login</h2>
             <form action="/login" method="POST">
                 <div class="form-group">
@@ -24,6 +36,7 @@
     </div>
     <div>
         <h2 class="school-name">E.E Caetano de <a>Campos</a></h2>
+    </div>
     </div>
 </body>
 </html>

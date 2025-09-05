@@ -22,7 +22,7 @@ body {
 }
 .register-box {
     width: 300px;
-    height: 450px;
+    height: 480px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
     background: #ffffffb3;
@@ -121,4 +121,50 @@ label {
     font-weight: bold;    /* deixa o texto mais visível */
     color: black;         /* define cor (mude se tiver fundo escuro) */
     font-size: 14px;      /* tamanho amigável */
+}
+
+.input-group {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  outline: none;
+  background: none;
+  color: black;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: gray;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* quando o input está focado ou preenchido */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: blue;
+  background: white;
+  padding: 0 5px;
+}
+
+
+/* Label sobe quando o input está em foco ou preenchido */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: blue;
 }
