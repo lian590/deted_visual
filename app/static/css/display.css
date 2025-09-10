@@ -127,16 +127,14 @@ a {
 
 .barra {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
-    width: 97.9%;
+    width: 100%;
     background-color: blue;
     margin-bottom: 10%;
     top: 0%;
     padding: 0px 20px 0px 20px;
     position: fixed;
-    
-
 }
 
 .sobresite {
@@ -161,10 +159,10 @@ a {
 
 .imagem-portao {
     position: absolute;
-    top: 400px;
-    left: 20%;
+    top: 300px;
+    left: 10%;
     width: auto;
-    height: 30%;
+    height: 40%;
     z-index: -1;
     opacity: 0.8;
     margin: auto;
@@ -289,4 +287,12 @@ footer{
         padding: 8px;
         margin: 4px;
     }
+}
+
+.perso_aluno{
+  display: grid;
+  position: absolute;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 10px;
+  left: 83%;
 }
