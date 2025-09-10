@@ -1,8 +1,0 @@
-{
-<<<<<<< HEAD
-    "liveServer.settings.port": 5000
-=======
-    "liveServer.settings.port": 5000,
-    "liveServer.settings.host": "127.0.0.1"
->>>>>>> f7b8872cd8f98b5a5d61491d364e375e4f0159b3
-}
