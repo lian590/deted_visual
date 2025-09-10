@@ -31,13 +31,14 @@ body {
     height: 480px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background: #ffffffb3;
+    background: #d9ecff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 30px;
     position: absolute;
+    box-shadow: 3px 3px #000000;
 }
 .title {
     font-size: 28px;
@@ -59,15 +60,28 @@ body {
 .btn {
     width: 104%;
     padding: 12px;
-    background: red;
+    background: rgb(0, 0, 0);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+.btn:hover {
+     transition: all 0.2s ease-in-out;
+}
+.btn:active{
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: none;
+    transform: translateY(4px);
+
+}
 .register {
     margin-top: 10px;
     font-size: 14px;
+    position: absolute;
+    top: 75%;
+    left: 20%;
 }
 
 .school-name {
@@ -77,11 +91,12 @@ body {
     text-align: center;
     position: absolute;
     top: 10vh;
-    left: 40%;
+    left: 40.5%;
+    -webkit-text-stroke: 0.2px black;
 }
 
 a {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -93,5 +108,13 @@ a {
 }
 
 .login {
-    color: white;
+    color: rgb(0, 0, 0);
+}
+
+label {
+    display: block;       /* força cada label a ficar acima do input */
+    margin-bottom: 5px;   /* espaço entre o texto e o input */
+    font-weight: bold;    /* deixa o texto mais visível */
+    color: black;         /* define cor (mude se tiver fundo escuro) */
+    font-size: 14px;      /* tamanho amigável */
 }
