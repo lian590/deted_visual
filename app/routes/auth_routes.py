@@ -37,14 +37,18 @@ def cadastro():
         senha_hash = generate_password_hash(senha1)
         nome_arquivo = secure_filename(imagem.filename)
         caminho = os.path.join(current_app.root_path, 'static', 'imagens', nome_arquivo)
-        imagem.save(caminho)
 
-        novo_funcionario = Funcionario(cpf_pk=rg, sk_email=email, senha=senha_hash, imagem=caminho)
-        db.session.add(novo_funcionario)
-        db.session.commit()
-
-        flash('Cadastro realizado com sucesso!')
-        return redirect(url_for('auth.login'))
+        try:
+            imagem.save(caminho)
+            novo_funcionario = Funcionario(cpf_pk=rg, sk_email=email, senha=senha_hash, imagem=caminho)
+            db.session.add(novo_funcionario)
+            db.session.commit()
+            flash('Cadastro realizado com sucesso!')
+            return redirect(url_for('auth.login'))
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Erro ao realizar cadastro: {str(e)}')
+            return redirect(url_for('auth.cadastro'))
 
     return render_template('cadastro2.html')
 
