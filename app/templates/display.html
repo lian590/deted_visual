@@ -14,18 +14,20 @@
         <div class="titulo">
             <h1 class="titulo-detect-visual">Star <span>Gate</span></h1>
         </div>
-        <div class="buton-secret">
-            <a href="{{ url_for('auth.cadastro') }}">
-                <button class="Secret">Secretaria</button>
-            </a>
-        </div>
-            <div class="diretoria">
-                <button class="Direct" onclick="window.location.href='login';">Diretoria</button>
-            </div>
-    </div>
-        <img src="/static/imagens/programa.png" alt="Imagem de um portão" class="imagem-portao">
-    <div class="caixinha">
+        <div class="perso_aluno">
 
+            <div class="buton-secret">
+                <a href="{{ url_for('auth.cadastro') }}">
+                    <button class="Secret">cadastro</button>
+                </a>
+            </div>
+            <div class="diretoria">
+                <button class="Direct" onclick="window.location.href='login';">login</button>
+            </div>
+        </div>
+    </div>
+    <div class="espaço-caixa"> <!-- caixa para separar do resto-->
+        <img src="/static/imagens/programa.png" alt="Imagem de um portão" class="imagem-portao">
         <div class="conteudo">
             <div class="texto">
                 <h2 class="subtitulo">Bem-vindo ao Star Gate</h2>
@@ -33,28 +35,20 @@
                 <p class="descricao">Nosso objetivo é proporcionar uma experiência intuitiva e acessível para todos os usuários, garantindo que as informações estejam sempre ao alcance de um clique.</p>
                 <p class="descricao">Explore as funcionalidades do Star Gate e descubra como ele pode transformar a forma como você se conecta com a escola.</p>
             </div>
+        </div> <!-- espaçocaixa -->
+            
+            
 
-    <div class="conteudo">
-        <div class="texto">
-            <h2 class="subtitulo">Bem-vindo ao Star Gate</h2>
-            <p class="descricao">O Star Gate é um sistema inovador desenvolvido para facilitar o acesso e a gestão de informações na escola. Com ele, alunos, professores e funcionários podem interagir de maneira eficiente e segura.</p>
-            <p class="descricao">Nosso objetivo é proporcionar uma experiência intuitiva e acessível para todos os usuários, garantindo que as informações estejam sempre ao alcance de um clique.</p>
-            <p class="descricao">Explore as funcionalidades do Star Gate e descubra como ele pode transformar a forma como você se conecta com a escola.</p>
 
-        </div>
-    </div> 
-    <div class="sobresite">
-        <a href="" class="sobre">Sobre o Star Gate</a>
-        <div class="palavrinha">
-            <h2 class="subtitulo-sobre">Sobre o Star Gate</h2>
-            <p class="descricao-sobre">O Star Gate é um sistema de gestão escolar projetado para otimizar a comunicação e o gerenciamento de informações entre alunos, professores e funcionários. Com uma interface amigável e funcionalidades robustas, o Star Gate facilita o acesso a dados importantes, como notas, horários, eventos e muito mais.</p>
-            <p class="descricao-sobre">Nosso sistema é desenvolvido com foco na segurança e na privacidade dos usuários, garantindo que todas as informações sejam protegidas e acessíveis apenas por pessoas autorizadas. Além disso, o Star Gate é constantemente atualizado para incorporar novas tecnologias e atender às necessidades em constante evolução da comunidade escolar.</p>
-            <p class="descricao-sobre">Com o Star Gate, a gestão escolar torna-se mais eficiente, permitindo que todos os envolvidos no processo educacional se concentrem no que realmente importa: o aprendizado e o desenvolvimento dos alunos.</p>
-        </div>
-        <footer class="rodape">
-            <p class="texto-rodape">© 2024 Star Gate. Todos os direitos reservados.</p>
-        </footer>
-    </div>
+
+
+
+
+
+
+
+
+
         <footer>
     <div class="footerContainer">
         <div class="socialIcons">
@@ -72,7 +66,6 @@
                 <li><a href="">our Team</a></li>
             </ul>
         </div>
-        
     </div>
     <div class="footerBottom">
         <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
