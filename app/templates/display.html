@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Gate</title>
     <link rel="stylesheet" href="/static/css/display.css">
-    <link rel="shortcut icon" href="/static/imagens/adam.jpg" type="image/x-icon" class="favicon">
-
+    <link rel="shortcut icon" href="/static/imagens/gate.png" type="image/x-icon" class="favicon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="barra">
@@ -16,61 +16,47 @@
         </div>
         <div class="perso_aluno">
 
+            <div class="diretoria">
+                <button class="Direct" onclick="window.location.href='login';">login</button>
+            </div>
             <div class="buton-secret">
                 <a href="{{ url_for('auth.cadastro') }}">
                     <button class="Secret">cadastro</button>
                 </a>
             </div>
-            <div class="diretoria">
-                <button class="Direct" onclick="window.location.href='login';">login</button>
-            </div>
         </div>
     </div>
     <div class="espaço-caixa"> <!-- caixa para separar do resto-->
+    </div>
         <img src="/static/imagens/programa.png" alt="Imagem de um portão" class="imagem-portao">
         <div class="conteudo">
             <div class="texto">
                 <h2 class="subtitulo">Bem-vindo ao Star Gate</h2>
                 <p class="descricao">O Star Gate é um sistema inovador desenvolvido para facilitar o acesso e a gestão de informações na escola. Com ele, alunos, professores e funcionários podem interagir de maneira eficiente e segura.</p>
-                <p class="descricao">Nosso objetivo é proporcionar uma experiência intuitiva e acessível para todos os usuários, garantindo que as informações estejam sempre ao alcance de um clique.</p>
-                <p class="descricao">Explore as funcionalidades do Star Gate e descubra como ele pode transformar a forma como você se conecta com a escola.</p>
             </div>
         </div> <!-- espaçocaixa -->
-            
-            
 
-
-
-
-
-
-
-
-
-
-
-        <footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">our Team</a></li>
+    <div class="tela-preta">
+        <div class="caixa-preta">
+            <img src="/static/imagens/constelacao.png" alt="Imagem da constelacao star gate" class="imagem-conste">
+            <h2 class="titulo-caixa">Recursos do Star Gate</h2>
+            <ul class="lista-recursos">
+                <li>Acesso rápido a notas e desempenho acadêmico</li>
+                <li>Comunicação direta entre alunos e professores</li>
+                <li>Calendário de eventos escolares</li>
+                <li>Biblioteca digital com recursos educacionais</li>
+                <li>Fóruns de discussão para colaboração entre estudantes</li>
             </ul>
         </div>
     </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
-    </div>
-</footer>
+
+
+
+
+
+
+
+
     <script src="/static/display.js"></script>
 </body>
 </html>

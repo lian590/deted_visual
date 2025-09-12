@@ -1,39 +1,85 @@
+
+
+/* retangulo pra ficar atras e destacar a imagem com o texto*/
+.espaço-caixa {
+    position: absolute;
+    top: 230px;
+    left: 5%;
+    width: 90%;
+    height: 590px;
+    background-color: #293370;
+    z-index: -1;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #000;
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Corpo centralizado e espaçado */
 body {
     margin: 0;
-    padding: 110px 0px 0px 0px;
+    padding-top: 110px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     min-height: 100vh;
-    box-sizing: border-box;
-    background-color: white;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', 'Playfair Display', serif;
+    background: linear-gradient(120deg, #232526 0%, #293370 100%);
+    overflow: auto;
+    letter-spacing: 0.5px;
 }
 
-/* Título centralizado */
+/* Títulos */
+
 .titulo-detect-visual {
     font-size: 3em;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     margin-top: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    transition: text-shadow 0.3s;
 }
 
-h1 span {
-    color: rgb(0, 0, 0);
+.titulo-detect-visual span {
+    color: #fff;
+    text-shadow: 1px 1px 6px #0072ff;
 }
 
-/* Botões adaptáveis */
-.Secret, .Direct {
+.titulo-scrull {
+    color: rgb(0, 150, 250);
+}
+
+
+.subtitulo {
+    color: #00c6ff;
+    font-size: 1.7em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 8px #232526;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+/* Botões base */
+.Secret,
+.Direct {
     width: 90%;
     max-width: 350px;
     padding: 20px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    color: white;
-    border: 2px solid black;
+    color: #fff;
+    border: 2px solid #000;
     border-radius: 20px;
     transition: all 0.3s ease;
     box-shadow: 5px 5px 0px #000;
@@ -42,42 +88,30 @@ h1 span {
 .Secret {
     background-color: rgb(0, 11, 210);
 }
-
 .Secret:hover {
     background-color: whitesmoke;
-    color: black;
-    box-shadow: 5px 5px 0px rgb(0, 0, 0);
+    color: #000;
 }
-
 .Secret:active {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     box-shadow: none;
     transform: translateY(4px);
 }
 
 .Direct {
-    background-color: black;
+    background-color: #000;
 }
-
 .Direct:hover {
-    background-color: white;
-    color: black;
-    box-shadow: 5px 5px 0px black;
+    background-color: #fff;
+    color: #000;
 }
-
 .Direct:active {
-    background-color: white;
+    background-color: #fff;
     box-shadow: none;
     transform: translateY(4px);
 }
 
-/* Caixa de texto com scroll */
-
-
-.titulo-scrull {
-    color: rgb(0, 150, 250);
-}
-
+/* Botão genérico */
 button {
     margin: 0 10px;
     padding: 10px 15px;
@@ -85,24 +119,187 @@ button {
     cursor: pointer;
 }
 
+.boton-d {
+    background-color: #000;
+    border-radius: 25px;
+    border: none;
+}
+
+/* Contador */
 .contador {
     font-size: 30px;
     margin-top: 10px;
 }
 
-.boton-d {
-    background-color: rgb(0, 0, 0);
-    border-radius: 25px;
-    border: none;
+/* Barra superior */
+.barra {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #293370;
+    z-index: 1000;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    margin-bottom: 10%;
 }
 
-/* 📱 Responsividade ainda mais linda */
+/* Seção sobre */
+.sobresite {
+    width: 10%;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    margin-top: 20px;
+}
+
+.sobre {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Imagem e conteúdo */
+.imagem-portao {
+    position: absolute;
+    top: 300px;
+    left: 10%;
+    height: 40%;
+    opacity: 0.8;
+    z-index: -1;
+    margin: auto;
+}
+
+.conteudo {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+}
+
+
+/* Texto */
+
+.texto {
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+    padding: 24px 28px;
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    white-space: pre-wrap;
+    color: #ffffff;
+    font-size: 1.15em;
+    background: rgba(41, 51, 112, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    line-height: 1.7;
+    transition: box-shadow 0.3s, background 0.3s;
+}
+
+
+
+/* Favicon */
+.favicon {
+    width: 32px;
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    margin-top: 5000px;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.socialIcons a i {
+    font-size: 2em;
+    color: #000;
+    opacity: 0.9;
+}
+.socialIcons a:hover {
+    background-color: #111;
+}
+.socialIcons a:hover i {
+    color: #fff;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footerNav ul li a {
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p {
+    color: #fff;
+}
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+/* Grid de alunos */
+.perso_aluno {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: absolute;
+    left: 83%;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .titulo-detect-visual {
         font-size: 2em;
         margin-top: 10px;
     }
-
+    
     .text {
         height: 300px;
         font-size: 16px;
@@ -112,187 +309,54 @@ button {
         font-size: 1.5em;
         padding: 15px;
     }
-
-
 }
 
-a {
-    color: white;
-}
-
-.favicon {
-    width: 32px;
-    height: 100px;
-}
-
-.barra {
-    display: flex;
-
-    align-items: center;
-    width: 100%;
-    background-color: blue;
-    margin-bottom: 10%;
-    top: 0%;
-    padding: 0px 20px 0px 20px;
-    position: fixed;
-}
-
-.sobresite {
-    width: 10%;
-    height: 50px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    margin: 20px 0px 0px 0px;
-}
-
-.sobre {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.imagem-portao {
-    position: absolute;
-    top: 300px;
-    left: 10%;
-    width: auto;
-    height: 40%;
-    z-index: -1;
-    opacity: 0.8;
-    margin: auto;
-}
-
-.conteudo {
-    position: absolute;
-    left: 50%;
-    top: 320px;
-}
-
-.subtitulo {
-    color: black;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    text-align: center;
-}
-
-.texto {
-    width: 90%;
-    max-width: 600px;
-    height: 400px;
-    padding: 20px;
-    margin: auto;
-    box-sizing: border-box;
-    white-space: pre-wrap;
-    font-family: "inter", sans-serif;
-
-}
-
-
-.palavrinha {
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-footer{
-    background-color: #111;
-}
-.footerContainer{
-    width: 100%;
-    padding: 70px 30px 20px ;
-}
-.socialIcons{
-    display: flex;
-    justify-content: center;
-}
-.socialIcons a{
-    text-decoration: none;
-    padding:  10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialIcons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0,9;
-}
-/* Hover affect on social media icon */
-.socialIcons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-.socialIcons a:hover i{
-    color: white;
-    transition: 0.5s;
-}
-.footerNav{
-    margin: 30px 0;
-}
-.footerNav ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-.footerNav ul li a{
-    color:white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-
-}
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-.footerBottom{
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-.footerBottom p{
-    color: white;
-}
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-@media (max-width: 700px){
-    .footerNav ul{
+@media (max-width: 700px) {
+    .footerNav ul {
         flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
+    }
+    .footerNav ul li {
+        width: 100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
 }
 
-.perso_aluno{
-  display: grid;
-  position: absolute;
-  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
-  gap: 10px;
-  left: 83%;
+
+/* Google Fonts import (adicione no HTML ou use @import no topo do CSS se preferir) */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap'); */
+
+.tela-preta {
+    margin-top: 900px;
+    background-color: black;
+    height: 600px;
+    box-shadow: 0 0 15px #000;
+    background-image: '..static/imagens/constelacao.png';
+    img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
 }
+
+.lista-recursos {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.titulo-caixa {
+    font-size: 2em;
+    font-weight: bold;
+    color: #00c6ff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 8px #232526;
+    transition: color 0.3s;
+}
+
