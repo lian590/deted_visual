@@ -6,16 +6,15 @@
     <title>Star Gate</title>
     <link rel="stylesheet" href="/static/css/display.css">
     <link rel="shortcut icon" href="/static/imagens/adam.jpg" type="image/x-icon" class="favicon">
-
+    <!-- Ícones FontAwesome -->
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="barra">
-
         <div class="titulo">
             <h1 class="titulo-detect-visual">Star <span>Gate</span></h1>
         </div>
         <div class="perso_aluno">
-
             <div class="buton-secret">
                 <a href="{{ url_for('auth.cadastro') }}">
                     <button class="Secret">cadastro</button>
@@ -26,7 +25,9 @@
             </div>
         </div>
     </div>
-    <div class="espaço-caixa"> <!-- caixa para separar do resto-->
+
+    <!-- Seção principal -->
+    <div class="espaço-caixa">
         <img src="/static/imagens/programa.png" alt="Imagem de um portão" class="imagem-portao">
         <div class="conteudo">
             <div class="texto">
@@ -35,42 +36,48 @@
                 <p class="descricao">Nosso objetivo é proporcionar uma experiência intuitiva e acessível para todos os usuários, garantindo que as informações estejam sempre ao alcance de um clique.</p>
                 <p class="descricao">Explore as funcionalidades do Star Gate e descubra como ele pode transformar a forma como você se conecta com a escola.</p>
             </div>
-        </div> <!-- espaçocaixa -->
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-        <footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">our Team</a></li>
-            </ul>
         </div>
     </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
+
+    <!-- 🎵 Player de áudio -->
+    <div class="player-container">
+        <h2>🎧 Ouça nosso áudio de boas-vindas</h2>
+        <audio id="meuAudio">
+        <source src="/static/audio_ai.mp3" type="audio/mpeg">
+        </audio>
+        <div id="timer">00:00</div>
+        <div class="controls">
+            <button onclick="tocarAudio()">▶️ Tocar</button>
+            <button onclick="pausarAudio()">⏸️ Pausar</button>
+            <button onclick="reiniciarAudio()">⏮️ Reiniciar</button>
+        </div>
     </div>
-</footer>
-    <script src="/static/display.js"></script>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
+        </div>
+    </footer>
+
+   <script src="/static/display.js"></script>
 </body>
 </html>
