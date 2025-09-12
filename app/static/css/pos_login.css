@@ -75,7 +75,7 @@ body::before {
 /* Órbitas */
 .orbit {
   position: absolute;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+   border: 1px dashed rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -131,7 +131,7 @@ body::before {
 
 /* Planetas com cores diferentes */
 .planet1 {
-  background: #FFD700; /* amarelo para Mercúrio */
+  background: #ffff66;  /* amarelo para Mercúrio */
   width: 12px;
   height: 12px;
   margin-top: -6px;
@@ -139,7 +139,7 @@ body::before {
 }
 
 .planet2 {
-  background: #FF4500; /* vermelho para Vênus */
+  background: #ff9966; /* vermelho para Vênus */
   width: 16px;
   height: 16px;
   margin-top: -8px;
@@ -147,7 +147,7 @@ body::before {
 }
 
 .planet3 {
-  background: #1E90FF; /* azul para Terra */
+  background: #66ccff; /* azul para Terra */
   width: 18px;
   height: 18px;
   margin-top: -9px;
@@ -155,7 +155,7 @@ body::before {
 }
 
 .planet4 {
-  background: #D2691E; /* marrom para Marte */
+  background: #ffcc99; /* marrom para Marte */
   width: 14px;
   height: 14px;
   margin-top: -7px;
@@ -169,10 +169,10 @@ body::before {
   left: 50%;
   width: 50px;
   height: 50px;
-  background: radial-gradient(circle, #FFD700, #FFA500);
+   background: radial-gradient(circle, #ffff33, #ffaa00);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.7);
+   box-shadow: 0 0 60px 30px rgba(255, 255, 0, 0.8);
   z-index: 2;
 }
 
