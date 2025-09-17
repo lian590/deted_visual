@@ -442,3 +442,7 @@ footer {
         gap: 2rem;
     }
 }
+
+.gate {
+    width: 70px;
+}
