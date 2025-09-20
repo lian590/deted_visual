@@ -12,7 +12,7 @@
     <body>
         <canvas id="starCanvas"></canvas>
         <div class="logo">   
-       <h2 class="school-name">E.E Caetano de Campos</h2>
+       
     </div>
     <div class="container">
         <div class="logo-container">
@@ -28,7 +28,8 @@
             {% endwith %} -->
         </div>
         <div class="register-box">
-            <h2 class="titulo-box">Caetano Cadastro</h2>
+            <h2 class="titulo-box">Caetano de Campos</h2>
+            <h3 class="titulo-box-1" >Cadastro </h3>
             <form action="{{ url_for('auth.cadastro') }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="cpf">Cpf</label> <br>
@@ -40,10 +41,6 @@
                     <input type="email" name="sk_email" placeholder=" " id="email" required>
                 </div>
             
-                <div class="imagen">
-                    <label for="imagem">Escolha uma imagem:</label> <br>
-                    <input type="file" name="image" id="imagem" accept="image/*" required>
-                </div>
             
                 <div class="form-group">
                     <label for="Senha">Senha</label> <br>
@@ -53,6 +50,11 @@
                 <div class="form-group">
                     <label for="senha2">Confirme a Senha</label> <br>
                     <input type="password" name="senha_2" placeholder=" " id="senha2" required>
+                </div>
+
+                <div class="escolher-imagen">
+                    <label for="imagem">Escolha uma imagem:</label> <br>
+                    <input type="file" name="image" id="imagem" accept="image/*" required>
                 </div>
                 <button class="btn" type="submit">Cadastrar</button>
             </form>

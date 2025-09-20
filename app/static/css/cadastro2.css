@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('/app/static/imagens/c244de7f-479a-424e-a58d-436fcf36b06e.jpg');
+  background-image: url('/app/static/css/imagens/c244de7f-479a-424e-a58d-436fcf36b06e.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20,18 +20,43 @@ body {
   left: 40%;
   background-color: none;
   margin: 100px auto;
-  width: 300px;
+  width: 230px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 70px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   text-align: left;
   color: white;
 
 }
 
 .titulo-box {
-  color: rgb(0, 0, 0);text-align: center;
-
+  color: rgb(255, 255, 255);text-align: center;
 }
+
+.register-box input {
+  background-color: #ffffff;
+  width: 95%;
+  padding: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.escolher-imagen input {
+  background-color: #072f5a;
+  border: none;
+}
+.btn {
+  background-color: #072f5a;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 7px;
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+}
+
+
