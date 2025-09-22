@@ -1,97 +1,147 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 7, 141));
+:root {
+  --fonte-principal: 'Roboto', sans-serif;
+  --cor-primaria: #007bff;
+  --cor-secundaria: #0056b3;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-principal);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .container {
-    display: flex;
-    width: 80%;
-    max-width: 900px;
-    justify-content: space-between;
-    align-items: center;
-    left: 40%;
-    position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
+
 .register-box {
-    width: 300px;
-    height: 480px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 15px;
-    background: #ffffffb3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
-.title {
-    font-size: 28px;
-    font-weight: bold;
+
+.register-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
 }
-.highlight {
-    color: red;
-}
+
 .form-group {
-    width: 90%;
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
 }
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .btn {
-    width: 104%;
-    padding: 12px;
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.register {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.school-name {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    position: absolute;
-    top: 10vh;
-    left: 40%;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
 }
 
-a {
-    color: rgb(255, 0, 0);
-    text-decoration: none;
+.btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.texto-cadastra-se {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 
 .cadastrinho {
-
+  color: #81c1ff;
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  border-bottom: 1px solid rgb(0, 0, 0);
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.login {
-    color: white;
+.cadastrinho:hover {
+  color: white;
+}
+
+/* Flash messages */
+.flash-messages {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.flash-messages li {
+  background: rgba(255, 193, 7, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 4px solid #ffc107;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .register-box {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .register-box h2 {
+    font-size: 20px;
+  }
 }
