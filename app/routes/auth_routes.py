@@ -11,7 +11,7 @@ auth = Blueprint('auth', __name__)
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': '93845208',
+    'password': '09090909',
     'database': 'hell_gate'
 }
 
